@@ -54,7 +54,7 @@ public class ThreadTask {
         try {
             for (Trip elem : Helper.object) {
                 if (!Thread.currentThread().isInterrupted()) {
-                    if (now.getToCompare() < elem.getDeparture().getToCompare()) {
+                    if (now.getToCompare() > elem.getDeparture().getToCompare()) {
                         now = elem.getDeparture();
                     }
                 } else {
@@ -199,7 +199,7 @@ class Thread3 implements Runnable {
         try {
             for (Trip elem : Helper.object) {
                 if (!Thread.currentThread().isInterrupted()) {
-                    if (now.getToCompare() < elem.getDeparture().getToCompare()) {
+                    if (now.getToCompare() > elem.getDeparture().getToCompare()) {
                         now = elem.getDeparture();
                     }
                 } else {
