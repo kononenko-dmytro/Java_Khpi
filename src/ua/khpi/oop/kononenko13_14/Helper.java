@@ -250,7 +250,7 @@ public class Helper {
         if (input.size() != 0) {
             System.out.println("Input number of note: ");
             num = in.nextInt();
-            if (num > 0 && num < input.size()) {
+            if (num >= 0 && num < input.size()) {
                 input.remove(num);
             }
         } else {
